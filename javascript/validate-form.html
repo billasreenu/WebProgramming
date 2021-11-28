@@ -3,6 +3,15 @@
 
 <head>
     <title>JavaScript - Form Validation</title>
+    <style>
+        .invalid {
+            border-color: red;
+        }
+        
+        #error {
+            color: red
+        }
+    </style>
 
     <script>
         function validateTextField() {
@@ -75,5 +84,14 @@
     </form>
 
 </body>
+<script>
+    name1.onblur = function() {
+        if (!name1.value.includes('@')) { // not email
+            // name1.classList.add('invalid');
+            // error.innerHTML = 'Please enter a correct email.'
+            document.getElementById("errUN").innerHTML = "Please enter a correct email.";
+        }
+    };
+</script>
 
 </html>
