@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        function searchSname() {
+            var input, filter, found, table, tr, td, i, j;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    tr[i].style.display = "";
+                    found = false;
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Search in HTML table</h2>
+
+    <input id='myInput' onkeyup='searchSname()' type='text'>
+
+    <table id='myTable'>
+        <tr>
+            <td>123</td>
+            <td>Virat</td>
+            <td>Kohli</td>
+        </tr>
+        <tr>
+            <td>124</td>
+            <td>Rohit</td>
+            <td>Sharma</td>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td>Shreyas</td>
+            <td>Iyer</td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
