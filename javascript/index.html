@@ -3,83 +3,15 @@
 
 <head>
     <title>JavaScript</title>
-
     <script>
-        function validateTextField() {
-
-            let fValue = document.getElementById("name1").value;
-            let myRegEx = /^[a-zA-Z0-9]+$/;
-
-            if (fValue === "")
-                document.getElementById("errUN").innerHTML = "Enter username";
-            else if (fValue.length < 5)
-                document.getElementById("errUN").innerHTML = "Should have min 5 chars";
-            else if (fValue.length > 32)
-                document.getElementById("errUN").innerHTML = "Allowed max 32 chars";
-            else if (!myRegEx.test(fValue))
-                document.getElementById("errUN").innerHTML = "Not a valid name - Only chars allowed";
-            else {
-                console.log("Good");
-                document.getElementById("errUN").innerHTML = "";
-                return true;
-            }
-
-            return false;
-
-        }
-
-
-        function validatePasswordField() {
-
-            let fValue = document.getElementById("password1").value;
-            let myRegEx = /^[a-zA-Z0-9]+$/;
-
-            // ^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$
-
-
-            if (fValue === "")
-                document.getElementById("errPW").innerHTML = "Enter password";
-            else if (fValue.length < 8)
-                document.getElementById("errPW").innerHTML = "Should have min 8 chars";
-            else if (fValue.length > 50)
-                document.getElementById("errPW").innerHTML = "Allowed max 50 chars";
-            else if (!myRegEx.test(fValue))
-                document.getElementById("errPW").innerHTML = "Not a valid password";
-            else {
-                console.log("Good");
-                document.getElementById("errPW").innerHTML = "";
-                return true;
-            }
-            return false;
-        }
-
-
-
-
-        function validateForm2(form) {
-            let val1 = validateTextField();
-            let va22 = validatePasswordField();
-            if (!val1 || !va22)
-                return false;
-            else
-                return true;
+        function helloJS() {
 
         }
     </script>
 </head>
 
 <body>
-
-    <form name="form1" method="" action="" onsubmit="return validateForm2(this)">
-        Username - onkeyup <br />
-        <input type="text" name="name1" id="name1" onkeyup="validateTextField()" /><br />
-        <label id="errUN" style="color:red"></label><br /> Password - oninput<br />
-        <input type="password" name="password1" id="password1" oninput="validatePasswordField()" /><br />
-        <label id="errPW" style="color:red"></label><br />
-
-        <input type="submit" />
-    </form>
-
+    <h1> Java Script</h1>
 </body>
 
 </html>
